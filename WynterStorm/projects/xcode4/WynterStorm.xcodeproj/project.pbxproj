@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB29571B1748E44300F954C5 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957071748E44300F954C5 /* Renderable.cpp */; };
+		CB29571C1748E44300F954C5 /* Physics2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957091748E44300F954C5 /* Physics2D.cpp */; };
+		CB29571D1748E44300F954C5 /* IComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29570C1748E44300F954C5 /* IComponent.cpp */; };
+		CB29571E1748E44300F954C5 /* IEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29570E1748E44300F954C5 /* IEvent.cpp */; };
+		CB29571F1748E44300F954C5 /* IGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957101748E44300F954C5 /* IGame.cpp */; };
+		CB2957201748E44300F954C5 /* IGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957121748E44300F954C5 /* IGameObject.cpp */; };
+		CB2957211748E44300F954C5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957161748E44300F954C5 /* Scene.cpp */; };
+		CB2957221748E44300F954C5 /* TGDP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957191748E44300F954C5 /* TGDP.cpp */; };
+		CB29572F17498B4000F954C5 /* LuaBehaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */; };
+		CB40BEC31747899400FE0AB2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEBE1747899400FE0AB2 /* main.cpp */; };
+		CB40BEE7174789F900FE0AB2 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEC7174789F900FE0AB2 /* lapi.c */; };
+		CB40BEE8174789F900FE0AB2 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEC8174789F900FE0AB2 /* lauxlib.c */; };
+		CB40BEE9174789F900FE0AB2 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEC9174789F900FE0AB2 /* lbaselib.c */; };
+		CB40BEEA174789F900FE0AB2 /* lbitlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECA174789F900FE0AB2 /* lbitlib.c */; };
+		CB40BEEB174789F900FE0AB2 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECB174789F900FE0AB2 /* lcode.c */; };
+		CB40BEEC174789F900FE0AB2 /* lcorolib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECC174789F900FE0AB2 /* lcorolib.c */; };
+		CB40BEED174789F900FE0AB2 /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECD174789F900FE0AB2 /* lctype.c */; };
+		CB40BEEE174789F900FE0AB2 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECE174789F900FE0AB2 /* ldblib.c */; };
+		CB40BEEF174789F900FE0AB2 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BECF174789F900FE0AB2 /* ldebug.c */; };
+		CB40BEF0174789F900FE0AB2 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED0174789F900FE0AB2 /* ldo.c */; };
+		CB40BEF1174789F900FE0AB2 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED1174789F900FE0AB2 /* ldump.c */; };
+		CB40BEF2174789F900FE0AB2 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED2174789F900FE0AB2 /* lfunc.c */; };
+		CB40BEF3174789F900FE0AB2 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED3174789F900FE0AB2 /* lgc.c */; };
+		CB40BEF4174789F900FE0AB2 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED4174789F900FE0AB2 /* linit.c */; };
+		CB40BEF5174789F900FE0AB2 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED5174789F900FE0AB2 /* liolib.c */; };
+		CB40BEF6174789F900FE0AB2 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED6174789F900FE0AB2 /* llex.c */; };
+		CB40BEF7174789F900FE0AB2 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED7174789F900FE0AB2 /* lmathlib.c */; };
+		CB40BEF8174789F900FE0AB2 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED8174789F900FE0AB2 /* lmem.c */; };
+		CB40BEF9174789F900FE0AB2 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BED9174789F900FE0AB2 /* loadlib.c */; };
+		CB40BEFA174789F900FE0AB2 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDA174789F900FE0AB2 /* lobject.c */; };
+		CB40BEFB174789F900FE0AB2 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDB174789F900FE0AB2 /* lopcodes.c */; };
+		CB40BEFC174789F900FE0AB2 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDC174789F900FE0AB2 /* loslib.c */; };
+		CB40BEFD174789F900FE0AB2 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDD174789F900FE0AB2 /* lparser.c */; };
+		CB40BEFE174789F900FE0AB2 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDE174789F900FE0AB2 /* lstate.c */; };
+		CB40BEFF174789F900FE0AB2 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEDF174789F900FE0AB2 /* lstring.c */; };
+		CB40BF00174789F900FE0AB2 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE0174789F900FE0AB2 /* lstrlib.c */; };
+		CB40BF01174789F900FE0AB2 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE1174789F900FE0AB2 /* ltable.c */; };
+		CB40BF02174789F900FE0AB2 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE2174789F900FE0AB2 /* ltablib.c */; };
+		CB40BF03174789F900FE0AB2 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE3174789F900FE0AB2 /* ltm.c */; };
+		CB40BF04174789F900FE0AB2 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE4174789F900FE0AB2 /* lundump.c */; };
+		CB40BF05174789F900FE0AB2 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE5174789F900FE0AB2 /* lvm.c */; };
+		CB40BF06174789F900FE0AB2 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEE6174789F900FE0AB2 /* lzio.c */; };
+		CBA501DC17478F510099D573 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = CBA501DA17478F510099D573 /* ResourcePath.mm */; };
+		CBA501E3174795EC0099D573 /* ObjectCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA501E1174795EC0099D573 /* ObjectCollision.cpp */; };
+		CBA501E6174796F80099D573 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA501E4174796F80099D573 /* Player.cpp */; };
+		CBB1107717478D5600CA891F /* freetype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1106F17478D5600CA891F /* freetype.framework */; };
+		CBB1107817478D5600CA891F /* sndfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107017478D5600CA891F /* sndfile.framework */; };
+		CBB1107917478D5600CA891F /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107117478D5600CA891F /* sfml-audio.framework */; };
+		CBB1107A17478D5600CA891F /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107217478D5600CA891F /* sfml-graphics.framework */; };
+		CBB1107B17478D5600CA891F /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107317478D5600CA891F /* sfml-network.framework */; };
+		CBB1107C17478D5600CA891F /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107417478D5600CA891F /* sfml-system.framework */; };
+		CBB1107D17478D5600CA891F /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107517478D5600CA891F /* sfml-window.framework */; };
+		CBB1107E17478D5600CA891F /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107617478D5600CA891F /* SFML.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB2957071748E44300F954C5 /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderable.cpp; sourceTree = "<group>"; };
+		CB2957081748E44300F954C5 /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderable.h; sourceTree = "<group>"; };
+		CB2957091748E44300F954C5 /* Physics2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Physics2D.cpp; sourceTree = "<group>"; };
+		CB29570A1748E44300F954C5 /* Physics2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics2D.h; sourceTree = "<group>"; };
+		CB29570C1748E44300F954C5 /* IComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IComponent.cpp; sourceTree = "<group>"; };
+		CB29570D1748E44300F954C5 /* IComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IComponent.h; sourceTree = "<group>"; };
+		CB29570E1748E44300F954C5 /* IEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IEvent.cpp; sourceTree = "<group>"; };
+		CB29570F1748E44300F954C5 /* IEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEvent.h; sourceTree = "<group>"; };
+		CB2957101748E44300F954C5 /* IGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IGame.cpp; sourceTree = "<group>"; };
+		CB2957111748E44300F954C5 /* IGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGame.h; sourceTree = "<group>"; };
+		CB2957121748E44300F954C5 /* IGameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IGameObject.cpp; sourceTree = "<group>"; };
+		CB2957131748E44300F954C5 /* IGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGameObject.h; sourceTree = "<group>"; };
+		CB2957141748E44300F954C5 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		CB2957161748E44300F954C5 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		CB2957171748E44300F954C5 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		CB2957191748E44300F954C5 /* TGDP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TGDP.cpp; sourceTree = "<group>"; };
+		CB29571A1748E44300F954C5 /* TGDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDP.h; sourceTree = "<group>"; };
+		CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LuaBehaviour.cpp; sourceTree = "<group>"; };
+		CB29572E17498B4000F954C5 /* LuaBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaBehaviour.h; sourceTree = "<group>"; };
+		CB40BEBE1747899400FE0AB2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CB40BEC7174789F900FE0AB2 /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
+		CB40BEC8174789F900FE0AB2 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
+		CB40BEC9174789F900FE0AB2 /* lbaselib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
+		CB40BECA174789F900FE0AB2 /* lbitlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbitlib.c; sourceTree = "<group>"; };
+		CB40BECB174789F900FE0AB2 /* lcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
+		CB40BECC174789F900FE0AB2 /* lcorolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcorolib.c; sourceTree = "<group>"; };
+		CB40BECD174789F900FE0AB2 /* lctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lctype.c; sourceTree = "<group>"; };
+		CB40BECE174789F900FE0AB2 /* ldblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldblib.c; sourceTree = "<group>"; };
+		CB40BECF174789F900FE0AB2 /* ldebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
+		CB40BED0174789F900FE0AB2 /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		CB40BED1174789F900FE0AB2 /* ldump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldump.c; sourceTree = "<group>"; };
+		CB40BED2174789F900FE0AB2 /* lfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfunc.c; sourceTree = "<group>"; };
+		CB40BED3174789F900FE0AB2 /* lgc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		CB40BED4174789F900FE0AB2 /* linit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linit.c; sourceTree = "<group>"; };
+		CB40BED5174789F900FE0AB2 /* liolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = liolib.c; sourceTree = "<group>"; };
+		CB40BED6174789F900FE0AB2 /* llex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = llex.c; sourceTree = "<group>"; };
+		CB40BED7174789F900FE0AB2 /* lmathlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmathlib.c; sourceTree = "<group>"; };
+		CB40BED8174789F900FE0AB2 /* lmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		CB40BED9174789F900FE0AB2 /* loadlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loadlib.c; sourceTree = "<group>"; };
+		CB40BEDA174789F900FE0AB2 /* lobject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
+		CB40BEDB174789F900FE0AB2 /* lopcodes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lopcodes.c; sourceTree = "<group>"; };
+		CB40BEDC174789F900FE0AB2 /* loslib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loslib.c; sourceTree = "<group>"; };
+		CB40BEDD174789F900FE0AB2 /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lparser.c; sourceTree = "<group>"; };
+		CB40BEDE174789F900FE0AB2 /* lstate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
+		CB40BEDF174789F900FE0AB2 /* lstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstring.c; sourceTree = "<group>"; };
+		CB40BEE0174789F900FE0AB2 /* lstrlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstrlib.c; sourceTree = "<group>"; };
+		CB40BEE1174789F900FE0AB2 /* ltable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltable.c; sourceTree = "<group>"; };
+		CB40BEE2174789F900FE0AB2 /* ltablib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltablib.c; sourceTree = "<group>"; };
+		CB40BEE3174789F900FE0AB2 /* ltm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		CB40BEE4174789F900FE0AB2 /* lundump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lundump.c; sourceTree = "<group>"; };
+		CB40BEE5174789F900FE0AB2 /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lvm.c; sourceTree = "<group>"; };
+		CB40BEE6174789F900FE0AB2 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
+		CB8C14061747112800FDD8E8 /* WynterStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WynterStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA501D917478F510099D573 /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = SOURCE_ROOT; };
+		CBA501DA17478F510099D573 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = SOURCE_ROOT; };
+		CBA501DB17478F510099D573 /* WynterStorm-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WynterStorm-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CBA501E1174795EC0099D573 /* ObjectCollision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectCollision.cpp; sourceTree = "<group>"; };
+		CBA501E2174795EC0099D573 /* ObjectCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectCollision.h; sourceTree = "<group>"; };
+		CBA501E4174796F80099D573 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		CBA501E5174796F80099D573 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		CBB1106F17478D5600CA891F /* freetype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = freetype.framework; path = ../../libraries/osx/universal/freetype.framework; sourceTree = "<group>"; };
+		CBB1107017478D5600CA891F /* sndfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sndfile.framework; path = ../../libraries/osx/universal/sndfile.framework; sourceTree = "<group>"; };
+		CBB1107117478D5600CA891F /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "../../libraries/osx/universal/sfml-audio.framework"; sourceTree = "<group>"; };
+		CBB1107217478D5600CA891F /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../libraries/osx/universal/sfml-graphics.framework"; sourceTree = "<group>"; };
+		CBB1107317478D5600CA891F /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../libraries/osx/universal/sfml-network.framework"; sourceTree = "<group>"; };
+		CBB1107417478D5600CA891F /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../libraries/osx/universal/sfml-system.framework"; sourceTree = "<group>"; };
+		CBB1107517478D5600CA891F /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../libraries/osx/universal/sfml-window.framework"; sourceTree = "<group>"; };
+		CBB1107617478D5600CA891F /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../libraries/osx/universal/SFML.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB8C14021747112800FDD8E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB1107717478D5600CA891F /* freetype.framework in Frameworks */,
+				CBB1107817478D5600CA891F /* sndfile.framework in Frameworks */,
+				CBB1107917478D5600CA891F /* sfml-audio.framework in Frameworks */,
+				CBB1107A17478D5600CA891F /* sfml-graphics.framework in Frameworks */,
+				CBB1107B17478D5600CA891F /* sfml-network.framework in Frameworks */,
+				CBB1107C17478D5600CA891F /* sfml-system.framework in Frameworks */,
+				CBB1107D17478D5600CA891F /* sfml-window.framework in Frameworks */,
+				CBB1107E17478D5600CA891F /* SFML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB2957061748E44300F954C5 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CB2957071748E44300F954C5 /* Renderable.cpp */,
+				CB2957081748E44300F954C5 /* Renderable.h */,
+				CB2957091748E44300F954C5 /* Physics2D.cpp */,
+				CB29570A1748E44300F954C5 /* Physics2D.h */,
+				CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */,
+				CB29572E17498B4000F954C5 /* LuaBehaviour.h */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CB29570B1748E44300F954C5 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CB29570C1748E44300F954C5 /* IComponent.cpp */,
+				CB29570D1748E44300F954C5 /* IComponent.h */,
+				CB29570E1748E44300F954C5 /* IEvent.cpp */,
+				CB29570F1748E44300F954C5 /* IEvent.h */,
+				CB2957101748E44300F954C5 /* IGame.cpp */,
+				CB2957111748E44300F954C5 /* IGame.h */,
+				CB2957121748E44300F954C5 /* IGameObject.cpp */,
+				CB2957131748E44300F954C5 /* IGameObject.h */,
+				CB2957141748E44300F954C5 /* Types.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		CB2957151748E44300F954C5 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				CB2957161748E44300F954C5 /* Scene.cpp */,
+				CB2957171748E44300F954C5 /* Scene.h */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		CB2957181748E44300F954C5 /* tgdp */ = {
+			isa = PBXGroup;
+			children = (
+				CB2957191748E44300F954C5 /* TGDP.cpp */,
+				CB29571A1748E44300F954C5 /* TGDP.h */,
+			);
+			path = tgdp;
+			sourceTree = "<group>";
+		};
+		CB40BEB61747899400FE0AB2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				CB2957061748E44300F954C5 /* components */,
+				CB29570B1748E44300F954C5 /* core */,
+				CB2957151748E44300F954C5 /* game */,
+				CB2957181748E44300F954C5 /* tgdp */,
+				CB40BEB71747899400FE0AB2 /* events */,
+				CB40BEBE1747899400FE0AB2 /* main.cpp */,
+				CB40BEBF1747899400FE0AB2 /* objects */,
+			);
+			name = source;
+			path = ../../../source;
+			sourceTree = "<group>";
+		};
+		CB40BEB71747899400FE0AB2 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				CBA501E1174795EC0099D573 /* ObjectCollision.cpp */,
+				CBA501E2174795EC0099D573 /* ObjectCollision.h */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		CB40BEBF1747899400FE0AB2 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				CBA501E4174796F80099D573 /* Player.cpp */,
+				CBA501E5174796F80099D573 /* Player.h */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		CB40BEC4174789F900FE0AB2 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				CB40BEC5174789F900FE0AB2 /* source */,
+			);
+			name = osx;
+			path = ../../../libraries/osx;
+			sourceTree = "<group>";
+		};
+		CB40BEC5174789F900FE0AB2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				CB40BEC6174789F900FE0AB2 /* lua */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		CB40BEC6174789F900FE0AB2 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				CB40BEC7174789F900FE0AB2 /* lapi.c */,
+				CB40BEC8174789F900FE0AB2 /* lauxlib.c */,
+				CB40BEC9174789F900FE0AB2 /* lbaselib.c */,
+				CB40BECA174789F900FE0AB2 /* lbitlib.c */,
+				CB40BECB174789F900FE0AB2 /* lcode.c */,
+				CB40BECC174789F900FE0AB2 /* lcorolib.c */,
+				CB40BECD174789F900FE0AB2 /* lctype.c */,
+				CB40BECE174789F900FE0AB2 /* ldblib.c */,
+				CB40BECF174789F900FE0AB2 /* ldebug.c */,
+				CB40BED0174789F900FE0AB2 /* ldo.c */,
+				CB40BED1174789F900FE0AB2 /* ldump.c */,
+				CB40BED2174789F900FE0AB2 /* lfunc.c */,
+				CB40BED3174789F900FE0AB2 /* lgc.c */,
+				CB40BED4174789F900FE0AB2 /* linit.c */,
+				CB40BED5174789F900FE0AB2 /* liolib.c */,
+				CB40BED6174789F900FE0AB2 /* llex.c */,
+				CB40BED7174789F900FE0AB2 /* lmathlib.c */,
+				CB40BED8174789F900FE0AB2 /* lmem.c */,
+				CB40BED9174789F900FE0AB2 /* loadlib.c */,
+				CB40BEDA174789F900FE0AB2 /* lobject.c */,
+				CB40BEDB174789F900FE0AB2 /* lopcodes.c */,
+				CB40BEDC174789F900FE0AB2 /* loslib.c */,
+				CB40BEDD174789F900FE0AB2 /* lparser.c */,
+				CB40BEDE174789F900FE0AB2 /* lstate.c */,
+				CB40BEDF174789F900FE0AB2 /* lstring.c */,
+				CB40BEE0174789F900FE0AB2 /* lstrlib.c */,
+				CB40BEE1174789F900FE0AB2 /* ltable.c */,
+				CB40BEE2174789F900FE0AB2 /* ltablib.c */,
+				CB40BEE3174789F900FE0AB2 /* ltm.c */,
+				CB40BEE4174789F900FE0AB2 /* lundump.c */,
+				CB40BEE5174789F900FE0AB2 /* lvm.c */,
+				CB40BEE6174789F900FE0AB2 /* lzio.c */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		CB40BF07174789FE00FE0AB2 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CB40BEC4174789F900FE0AB2 /* osx */,
+			);
+			name = libraries;
+			sourceTree = "<group>";
+		};
+		CB8C13FC1747112800FDD8E8 = {
+			isa = PBXGroup;
+			children = (
+				CBB1106F17478D5600CA891F /* freetype.framework */,
+				CBB1107017478D5600CA891F /* sndfile.framework */,
+				CBB1107117478D5600CA891F /* sfml-audio.framework */,
+				CBB1107217478D5600CA891F /* sfml-graphics.framework */,
+				CBB1107317478D5600CA891F /* sfml-network.framework */,
+				CBB1107417478D5600CA891F /* sfml-system.framework */,
+				CBB1107517478D5600CA891F /* sfml-window.framework */,
+				CBB1107617478D5600CA891F /* SFML.framework */,
+				CB8C14081747112800FDD8E8 /* WynterStorm */,
+				CB8C14071747112800FDD8E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB8C14071747112800FDD8E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8C14061747112800FDD8E8 /* WynterStorm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8C14081747112800FDD8E8 /* WynterStorm */ = {
+			isa = PBXGroup;
+			children = (
+				CB40BF07174789FE00FE0AB2 /* libraries */,
+				CB40BEB61747899400FE0AB2 /* source */,
+				CB8C14091747112800FDD8E8 /* Supporting Files */,
+			);
+			path = WynterStorm;
+			sourceTree = "<group>";
+		};
+		CB8C14091747112800FDD8E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBA501D917478F510099D573 /* ResourcePath.hpp */,
+				CBA501DA17478F510099D573 /* ResourcePath.mm */,
+				CBA501DB17478F510099D573 /* WynterStorm-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB8C14051747112800FDD8E8 /* WynterStorm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB8C141B1747112900FDD8E8 /* Build configuration list for PBXNativeTarget "WynterStorm" */;
+			buildPhases = (
+				CB8C14011747112800FDD8E8 /* Sources */,
+				CB8C14021747112800FDD8E8 /* Frameworks */,
+				CB8C14031747112800FDD8E8 /* Resources */,
+				CB8C14041747112800FDD8E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WynterStorm;
+			productName = WynterStorm;
+			productReference = CB8C14061747112800FDD8E8 /* WynterStorm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB8C13FD1747112800FDD8E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Amarant;
+			};
+			buildConfigurationList = CB8C14001747112800FDD8E8 /* Build configuration list for PBXProject "WynterStorm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB8C13FC1747112800FDD8E8;
+			productRefGroup = CB8C14071747112800FDD8E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB8C14051747112800FDD8E8 /* WynterStorm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB8C14031747112800FDD8E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB8C14041747112800FDD8E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required sfml dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# Are we building a project that uses framework or dylibs ?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert : not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $1 is a path\n{\n    test $# -eq 1\n    assert $? \"force_remove() requires one parameter\"\n    rm -fr \"$1\"\n    assert $? \"couldn't remove $1\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n    \n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1.2.dylib\"\n        force_remove \"$dest/libsfml-$1-d.2.dylib\"\n        force_remove \"$dest/sfml-$1.framework\"\n    \n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            copy \"/Library/Frameworks/sfml-$1.framework\" \"$dest/sfml-$1.framework\"\n        elif [ $CONFIGURATION = \"Debug\" ] && [ $SFML_LINK_DYLIBS_SUFFIX_DEBUG != \"\" ]\n        then\n            copy \"/usr/local/lib/libsfml-$1-d.2.dylib\" \"$dest/libsfml-$1-d.2.dylib\"\n        else\n            copy \"/usr/local/lib/libsfml-$1.2.dylib\" \"$dest/libsfml-$1.2.dylib\"\n        fi\n        \n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy sndfile framework too\n            copy \"/Library/Frameworks/sndfile.framework\" \"$dest/sndfile.framework\"\n        fi\n\n        if [ \"$1\" = \"graphics\" ]\n        then\n            # copy freetype framework too\n            copy \"/Library/Frameworks/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB8C14011747112800FDD8E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB40BEC31747899400FE0AB2 /* main.cpp in Sources */,
+				CB40BEE7174789F900FE0AB2 /* lapi.c in Sources */,
+				CB40BEE8174789F900FE0AB2 /* lauxlib.c in Sources */,
+				CB40BEE9174789F900FE0AB2 /* lbaselib.c in Sources */,
+				CB40BEEA174789F900FE0AB2 /* lbitlib.c in Sources */,
+				CB40BEEB174789F900FE0AB2 /* lcode.c in Sources */,
+				CB40BEEC174789F900FE0AB2 /* lcorolib.c in Sources */,
+				CB40BEED174789F900FE0AB2 /* lctype.c in Sources */,
+				CB40BEEE174789F900FE0AB2 /* ldblib.c in Sources */,
+				CB40BEEF174789F900FE0AB2 /* ldebug.c in Sources */,
+				CB40BEF0174789F900FE0AB2 /* ldo.c in Sources */,
+				CB40BEF1174789F900FE0AB2 /* ldump.c in Sources */,
+				CB40BEF2174789F900FE0AB2 /* lfunc.c in Sources */,
+				CB40BEF3174789F900FE0AB2 /* lgc.c in Sources */,
+				CB40BEF4174789F900FE0AB2 /* linit.c in Sources */,
+				CB40BEF5174789F900FE0AB2 /* liolib.c in Sources */,
+				CB40BEF6174789F900FE0AB2 /* llex.c in Sources */,
+				CB40BEF7174789F900FE0AB2 /* lmathlib.c in Sources */,
+				CB40BEF8174789F900FE0AB2 /* lmem.c in Sources */,
+				CB40BEF9174789F900FE0AB2 /* loadlib.c in Sources */,
+				CB40BEFA174789F900FE0AB2 /* lobject.c in Sources */,
+				CB40BEFB174789F900FE0AB2 /* lopcodes.c in Sources */,
+				CB40BEFC174789F900FE0AB2 /* loslib.c in Sources */,
+				CB40BEFD174789F900FE0AB2 /* lparser.c in Sources */,
+				CB40BEFE174789F900FE0AB2 /* lstate.c in Sources */,
+				CB40BEFF174789F900FE0AB2 /* lstring.c in Sources */,
+				CB40BF00174789F900FE0AB2 /* lstrlib.c in Sources */,
+				CB40BF01174789F900FE0AB2 /* ltable.c in Sources */,
+				CB40BF02174789F900FE0AB2 /* ltablib.c in Sources */,
+				CB40BF03174789F900FE0AB2 /* ltm.c in Sources */,
+				CB40BF04174789F900FE0AB2 /* lundump.c in Sources */,
+				CB40BF05174789F900FE0AB2 /* lvm.c in Sources */,
+				CB40BF06174789F900FE0AB2 /* lzio.c in Sources */,
+				CBA501DC17478F510099D573 /* ResourcePath.mm in Sources */,
+				CBA501E3174795EC0099D573 /* ObjectCollision.cpp in Sources */,
+				CBA501E6174796F80099D573 /* Player.cpp in Sources */,
+				CB29571B1748E44300F954C5 /* Renderable.cpp in Sources */,
+				CB29571C1748E44300F954C5 /* Physics2D.cpp in Sources */,
+				CB29571D1748E44300F954C5 /* IComponent.cpp in Sources */,
+				CB29571E1748E44300F954C5 /* IEvent.cpp in Sources */,
+				CB29571F1748E44300F954C5 /* IGame.cpp in Sources */,
+				CB2957201748E44300F954C5 /* IGameObject.cpp in Sources */,
+				CB2957211748E44300F954C5 /* Scene.cpp in Sources */,
+				CB2957221748E44300F954C5 /* TGDP.cpp in Sources */,
+				CB29572F17498B4000F954C5 /* LuaBehaviour.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CB8C14191747112900FDD8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		CB8C141A1747112900FDD8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		CB8C141C1747112900FDD8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libraries/osx/universal\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+					"\"$(SRCROOT)/../../includes\"",
+					"\"$(SRCROOT)/../../includes/lua\"",
+					"\"$(SRCROOT)/../../source\"",
+				);
+				INFOPLIST_FILE = "WynterStorm-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libraries/osx/\"",
+					"\"$(SRCROOT)/../../libraries/osx/source\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB8C141D1747112900FDD8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libraries/osx/universal\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+					"\"$(SRCROOT)/../../includes\"",
+					"\"$(SRCROOT)/../../includes/lua\"",
+					"\"$(SRCROOT)/../../source\"",
+				);
+				INFOPLIST_FILE = "WynterStorm-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libraries/osx/\"",
+					"\"$(SRCROOT)/../../libraries/osx/source\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB8C14001747112800FDD8E8 /* Build configuration list for PBXProject "WynterStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8C14191747112900FDD8E8 /* Debug */,
+				CB8C141A1747112900FDD8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB8C141B1747112900FDD8E8 /* Build configuration list for PBXNativeTarget "WynterStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8C141C1747112900FDD8E8 /* Debug */,
+				CB8C141D1747112900FDD8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB8C13FD1747112800FDD8E8 /* Project object */;
+}

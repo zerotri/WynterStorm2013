@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{35ecf2fa-e8ef-4904-ad92-913de3488ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries">
+      <UniqueIdentifier>{fa14d608-6264-4645-bdd4-16e09e2f6a4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{9efa9216-2076-4d8e-bb4c-594106714b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\lua">
+      <UniqueIdentifier>{62ec2a1c-c87f-49d4-af98-af2e0189ddcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\objects">
+      <UniqueIdentifier>{ba07747f-5e2e-4cb8-9363-c4c0b35671a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\events">
+      <UniqueIdentifier>{b63629e0-5547-40e6-b026-2f2718c41176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{1e16b7e3-96f6-4fd0-81ef-551195928e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tgdp">
+      <UniqueIdentifier>{c516a91f-4771-4f22-836d-a9d6b255e55e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game">
+      <UniqueIdentifier>{2f8c5b4a-f1be-4d4c-b4b0-49438496ca54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\components">
+      <UniqueIdentifier>{f586a7d7-664f-4d88-a96d-bbf34d8557e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\events\ObjectCollision.cpp">
+      <Filter>source\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\objects\Player.cpp">
+      <Filter>source\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\IEvent.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\IGame.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\IGameObject.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tgdp\TGDP.cpp">
+      <Filter>source\tgdp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\Scene.cpp">
+      <Filter>source\game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\IComponent.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\Transform.cpp">
+      <Filter>source\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\Sprite.cpp">
+      <Filter>source\components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\events\ObjectCollision.h">
+      <Filter>source\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\objects\Player.h">
+      <Filter>source\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\IEvent.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\IGame.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\IGameObject.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tgdp\TGDP.h">
+      <Filter>source\tgdp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\Scene.h">
+      <Filter>source\game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\IComponent.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\Transform.h">
+      <Filter>source\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\Types.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\Sprite.h">
+      <Filter>source\components</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

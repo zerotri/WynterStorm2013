@@ -31,6 +31,18 @@
     <Filter Include="source\components">
       <UniqueIdentifier>{f586a7d7-664f-4d88-a96d-bbf34d8557e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\components\physics">
+      <UniqueIdentifier>{4a2e3338-d5a2-4ec8-a50c-c20274654e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\components\renderables">
+      <UniqueIdentifier>{a1597e76-3c0c-4b97-b57f-270cc4c576ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\components\scripting">
+      <UniqueIdentifier>{5d09b237-9689-4c82-9801-aefbb3851383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{b809928c-0526-4001-b707-46b74755bcfb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\main.cpp">
@@ -60,11 +72,125 @@
     <ClCompile Include="..\..\source\core\IComponent.cpp">
       <Filter>source\core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\components\Transform.cpp">
+    <ClCompile Include="..\..\source\components\Renderable.cpp">
       <Filter>source\components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\components\Sprite.cpp">
+    <ClCompile Include="..\..\source\core\IComponentSystem.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\PhysicalBody.cpp">
       <Filter>source\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\renderables\PhysicsDebugRenderer.cpp">
+      <Filter>source\components\renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\physics\PhysicsCollider.cpp">
+      <Filter>source\components\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\physics\CircleCollider.cpp">
+      <Filter>source\components\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\physics\RectangleCollider.cpp">
+      <Filter>source\components\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\components\scripting\LuaBehaviour.cpp">
+      <Filter>source\components\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lapi.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lauxlib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lbaselib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lbitlib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lcode.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lcorolib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lctype.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldblib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldebug.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldo.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldump.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lfunc.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lgc.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\linit.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\liolib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\llex.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lmathlib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lmem.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\loadlib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lobject.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lopcodes.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\loslib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lparser.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstate.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstring.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstrlib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltable.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltablib.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltm.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lundump.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lvm.c">
+      <Filter>libraries\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libraries\windows\source\lua\lzio.c">
+      <Filter>libraries\lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -92,14 +218,37 @@
     <ClInclude Include="..\..\source\core\IComponent.h">
       <Filter>source\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\components\Transform.h">
-      <Filter>source\components</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\source\core\Types.h">
       <Filter>source\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\components\Sprite.h">
+    <ClInclude Include="..\..\source\components\Renderable.h">
       <Filter>source\components</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\core\IComponentSystem.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\PhysicalBody.h">
+      <Filter>source\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\renderables\PhysicsDebugRenderer.h">
+      <Filter>source\components\renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\physics\PhysicsCollider.h">
+      <Filter>source\components\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\physics\CircleCollider.h">
+      <Filter>source\components\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\physics\RectangleCollider.h">
+      <Filter>source\components\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\components\scripting\LuaBehaviour.h">
+      <Filter>source\components\scripting</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\assets\test.lua">
+      <Filter>assets</Filter>
+    </None>
   </ItemGroup>
 </Project>

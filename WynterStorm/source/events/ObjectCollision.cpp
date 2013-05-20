@@ -8,10 +8,13 @@
 
 #include "ObjectCollision.h"
 
-ws::events::ObjectCollision::ObjectCollision(ws::core::IGameObject* other)
-	: other(other) {
+ws::events::ObjectCollision::ObjectCollision(ws::core::IGameObject* objectA, ws::core::IGameObject* objectB)
+	: objectA(objectA), objectB(objectB) {
 	
 }
-ws::core::IGameObject* ws::events::ObjectCollision::getOtherObject() {
-	return this->other;
+ws::core::IGameObject* ws::events::ObjectCollision::getObjectA() {
+	return this->objectA;
+}
+ws::core::IGameObject* ws::events::ObjectCollision::getObjectB() {
+	return this->objectB;
 }

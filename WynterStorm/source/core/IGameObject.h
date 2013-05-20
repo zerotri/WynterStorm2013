@@ -30,7 +30,6 @@ namespace ws {
 				{
 					tag = typeid(ComponentType).name() + std::to_string(ws::core::IComponent::getNextComponentId());
 				}
-				//size_t componentHash = typeid(ComponentType).hash_code();
 				auto componentSearch = components.find(tag);
 				if(componentSearch == components.end()) {
 					components[tag] = new ComponentType(this, tag);
@@ -39,16 +38,6 @@ namespace ws {
 				// TODO: I really should implement this as c++ exceptions. Do that later.
 				return ERROR_UNKNOWN;
 			}
-			/*template<typename ComponentType> int addComponent() {
-				size_t componentHash = typeid(ComponentType).hash_code();
-				auto componentSearch = components.find(componentHash);
-				if(componentSearch == components.end()) {
-					components[componentHash] = new ComponentType(this);
-					return ERROR_NONE;
-				}
-				// TODO: I really should implement this as c++ exceptions. Do that later.
-				return ERROR_UNKNOWN;
-			}*/
 
 
 			template<typename ComponentType> bool hasComponentOfType() {
@@ -67,22 +56,27 @@ namespace ws {
 				}
 				return nullptr;
 			}
-			template<typename ComponentType> std::vector<ComponentType*> getAllEnabledComponentsOfType() {
+			template<typename ComponentType> std::vector<ComponentType*> getAllComponentsOfType() {
 				std::vector<ComponentType*> list;
 				for( auto iter : components ) {
-					if(iter.second->getEnabled()) {
-						auto comp = dynamic_cast<ComponentType*>(iter.second);
-						if(comp != nullptr) {
-							list.push_back(comp);
-						}
+					auto comp = dynamic_cast<ComponentType*>(iter.second);
+					if(comp != nullptr) {
+						list.push_back(comp);
 					}
 				}
 				return list;
 			}
 			virtual int subscribeToScene(ws::game::Scene* scene);
 			virtual int onEvent(ws::core::IEvent* event);
+
+			//
 			virtual int update(float deltaTime);
 			virtual int draw();
+
+			// automatically handled events
+			virtual int onObjectCollision(IGameObject* other);
+
+
 		
 		};
 	}

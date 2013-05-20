@@ -16,10 +16,12 @@ namespace ws {
 	namespace events {
 		class ObjectCollision : public ws::core::IEvent {
 		protected:
-			ws::core::IGameObject* other;
+			ws::core::IGameObject* objectA;
+			ws::core::IGameObject* objectB;
 		public:
-			ObjectCollision(ws::core::IGameObject* other);
-			ws::core::IGameObject* getOtherObject();
+			ObjectCollision(ws::core::IGameObject* objectA, ws::core::IGameObject* objectB);
+			ws::core::IGameObject* getObjectA();
+			ws::core::IGameObject* getObjectB();
 		};
 	}
 }

@@ -2,6 +2,7 @@
 #define WYNTERSTORM_ICOMPONENT_H
 #include <vector>
 #include <string>
+#include <stdint.h>
 
 namespace ws {
 	namespace core {

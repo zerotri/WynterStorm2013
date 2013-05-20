@@ -72,11 +72,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS ;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\source;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\libraries\windows\debug-x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chipmunk.lib;sfml-main-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -84,13 +85,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\source;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\includes\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS ;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\source;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS ;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\libraries\windows\debug-x86_64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main-d.lib;sfml-system-s-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-window-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>chipmunk.lib;sfml-main-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,13 +103,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS ;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\source;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\libraries\windows\release-x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chipmunk.lib;sfml-main.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,7 +120,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\source;$(ProjectDir)\..\..\includes;$(ProjectDir)\..\..\includes\lua;$(ProjectDir)\..\..\includes\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS ;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -125,13 +128,51 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\libraries\windows\release-x86_64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main.lib;sfml-system-s.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-window-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>chipmunk.lib;sfml-main.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\source\components\Sprite.cpp" />
-    <ClCompile Include="..\..\source\components\Transform.cpp" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lapi.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lauxlib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lbaselib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lbitlib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lcode.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lcorolib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lctype.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldblib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldebug.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldo.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ldump.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lfunc.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lgc.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\linit.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\liolib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\llex.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lmathlib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lmem.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\loadlib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lobject.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lopcodes.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\loslib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lparser.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstate.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstring.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lstrlib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltable.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltablib.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\ltm.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lundump.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lvm.c" />
+    <ClCompile Include="..\..\libraries\windows\source\lua\lzio.c" />
+    <ClCompile Include="..\..\source\components\PhysicalBody.cpp" />
+    <ClCompile Include="..\..\source\components\physics\CircleCollider.cpp" />
+    <ClCompile Include="..\..\source\components\physics\PhysicsCollider.cpp" />
+    <ClCompile Include="..\..\source\components\physics\RectangleCollider.cpp" />
+    <ClCompile Include="..\..\source\components\Renderable.cpp" />
+    <ClCompile Include="..\..\source\components\renderables\PhysicsDebugRenderer.cpp" />
+    <ClCompile Include="..\..\source\components\scripting\LuaBehaviour.cpp" />
     <ClCompile Include="..\..\source\core\IComponent.cpp" />
+    <ClCompile Include="..\..\source\core\IComponentSystem.cpp" />
     <ClCompile Include="..\..\source\core\IEvent.cpp" />
     <ClCompile Include="..\..\source\core\IGame.cpp" />
     <ClCompile Include="..\..\source\core\IGameObject.cpp" />
@@ -142,9 +183,15 @@
     <ClCompile Include="..\..\source\tgdp\TGDP.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\source\components\Sprite.h" />
-    <ClInclude Include="..\..\source\components\Transform.h" />
+    <ClInclude Include="..\..\source\components\PhysicalBody.h" />
+    <ClInclude Include="..\..\source\components\physics\CircleCollider.h" />
+    <ClInclude Include="..\..\source\components\physics\PhysicsCollider.h" />
+    <ClInclude Include="..\..\source\components\physics\RectangleCollider.h" />
+    <ClInclude Include="..\..\source\components\Renderable.h" />
+    <ClInclude Include="..\..\source\components\renderables\PhysicsDebugRenderer.h" />
+    <ClInclude Include="..\..\source\components\scripting\LuaBehaviour.h" />
     <ClInclude Include="..\..\source\core\IComponent.h" />
+    <ClInclude Include="..\..\source\core\IComponentSystem.h" />
     <ClInclude Include="..\..\source\core\IEvent.h" />
     <ClInclude Include="..\..\source\core\IGame.h" />
     <ClInclude Include="..\..\source\core\IGameObject.h" />
@@ -153,6 +200,9 @@
     <ClInclude Include="..\..\source\game\Scene.h" />
     <ClInclude Include="..\..\source\objects\Player.h" />
     <ClInclude Include="..\..\source\tgdp\TGDP.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\assets\test.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

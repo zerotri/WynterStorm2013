@@ -22,6 +22,7 @@ namespace ws {
 			virtual int subscribeToScene(ws::game::Scene* scene);
 			virtual int update(float deltaTime);
 			virtual int draw();
+			virtual int onObjectCollision(ws::core::IGameObject* other);
 		};
 	}
 }

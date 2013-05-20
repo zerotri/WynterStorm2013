@@ -1,2 +1,9 @@
-
+*.obj
+*.tlog
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.log
+*.lastbuildstate
 .DS_Store

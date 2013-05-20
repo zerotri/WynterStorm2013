@@ -7,7 +7,11 @@
 #include <map>
 #include <typeinfo>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <core/IComponentSystem.h>
+#include <components/PhysicalBody.h>
+#include <components/Renderable.h>
 
+#include <chipmunk/chipmunk.h>
 
 namespace ws {
 	namespace game {
@@ -15,6 +19,14 @@ namespace ws {
 		protected:
 			std::vector<ws::core::IGameObject*> objects;
 			std::map<size_t, std::vector<ws::core::IGameObject*>> eventSubscriptions;
+
+			//physical space
+			cpSpace* space;
+
+
+			//systems
+			ws::core::IComponentSystem<ws::components::PhysicalBody> physicsSystem;
+			ws::core::IComponentSystem<ws::components::Renderable> renderingSystem;
 		public:
 			Scene(void);
 			virtual ~Scene(void);

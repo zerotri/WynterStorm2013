@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CB29571B1748E44300F954C5 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957071748E44300F954C5 /* Renderable.cpp */; };
-		CB29571C1748E44300F954C5 /* Physics2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957091748E44300F954C5 /* Physics2D.cpp */; };
 		CB29571D1748E44300F954C5 /* IComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29570C1748E44300F954C5 /* IComponent.cpp */; };
 		CB29571E1748E44300F954C5 /* IEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29570E1748E44300F954C5 /* IEvent.cpp */; };
 		CB29571F1748E44300F954C5 /* IGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957101748E44300F954C5 /* IGame.cpp */; };
 		CB2957201748E44300F954C5 /* IGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957121748E44300F954C5 /* IGameObject.cpp */; };
 		CB2957211748E44300F954C5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957161748E44300F954C5 /* Scene.cpp */; };
 		CB2957221748E44300F954C5 /* TGDP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB2957191748E44300F954C5 /* TGDP.cpp */; };
-		CB29572F17498B4000F954C5 /* LuaBehaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */; };
 		CB40BEC31747899400FE0AB2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEBE1747899400FE0AB2 /* main.cpp */; };
 		CB40BEE7174789F900FE0AB2 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEC7174789F900FE0AB2 /* lapi.c */; };
 		CB40BEE8174789F900FE0AB2 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = CB40BEC8174789F900FE0AB2 /* lauxlib.c */; };
@@ -60,13 +58,52 @@
 		CBB1107C17478D5600CA891F /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107417478D5600CA891F /* sfml-system.framework */; };
 		CBB1107D17478D5600CA891F /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107517478D5600CA891F /* sfml-window.framework */; };
 		CBB1107E17478D5600CA891F /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107617478D5600CA891F /* SFML.framework */; };
+		CBBDACC4174A4E9900F8CA5D /* PhysicalBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACB5174A4E9900F8CA5D /* PhysicalBody.cpp */; };
+		CBBDACC5174A4E9900F8CA5D /* CircleCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACB8174A4E9900F8CA5D /* CircleCollider.cpp */; };
+		CBBDACC6174A4E9900F8CA5D /* PhysicsCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACBA174A4E9900F8CA5D /* PhysicsCollider.cpp */; };
+		CBBDACC7174A4E9900F8CA5D /* RectangleCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACBC174A4E9900F8CA5D /* RectangleCollider.cpp */; };
+		CBBDACC8174A4E9900F8CA5D /* PhysicsDebugRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACBF174A4E9900F8CA5D /* PhysicsDebugRenderer.cpp */; };
+		CBBDACC9174A4E9900F8CA5D /* LuaBehaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBBDACC2174A4E9900F8CA5D /* LuaBehaviour.cpp */; };
+		CBBDACCD174A501000F8CA5D /* libChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBDACCC174A501000F8CA5D /* libChipmunk.a */; };
+		CBBDACD6174A52A000F8CA5D /* freetype.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1106F17478D5600CA891F /* freetype.framework */; };
+		CBBDACD7174A52A000F8CA5D /* sndfile.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107017478D5600CA891F /* sndfile.framework */; };
+		CBBDACD8174A52A000F8CA5D /* sfml-audio.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107117478D5600CA891F /* sfml-audio.framework */; };
+		CBBDACD9174A52A000F8CA5D /* sfml-graphics.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107217478D5600CA891F /* sfml-graphics.framework */; };
+		CBBDACDA174A52A000F8CA5D /* sfml-network.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107317478D5600CA891F /* sfml-network.framework */; };
+		CBBDACDB174A52A000F8CA5D /* sfml-system.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107417478D5600CA891F /* sfml-system.framework */; };
+		CBBDACDC174A52A000F8CA5D /* sfml-window.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBB1107517478D5600CA891F /* sfml-window.framework */; };
+		CBBDACDE174A52FC00F8CA5D /* SFML.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBBDACDD174A52FC00F8CA5D /* SFML.framework */; };
+		CBBDACE7174A535800F8CA5D /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CBBDACE2174A535800F8CA5D /* cute_image.jpg */; };
+		CBBDACE8174A535800F8CA5D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBDACE3174A535800F8CA5D /* icon.png */; };
+		CBBDACE9174A535800F8CA5D /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = CBBDACE4174A535800F8CA5D /* nice_music.ogg */; };
+		CBBDACEA174A535800F8CA5D /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBBDACE5174A535800F8CA5D /* sansation.ttf */; };
+		CBBDACEB174A535800F8CA5D /* test.lua in Resources */ = {isa = PBXBuildFile; fileRef = CBBDACE6174A535800F8CA5D /* test.lua */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBBDACD5174A529400F8CA5D /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBBDACDE174A52FC00F8CA5D /* SFML.framework in Copy Frameworks */,
+				CBBDACD6174A52A000F8CA5D /* freetype.framework in Copy Frameworks */,
+				CBBDACD7174A52A000F8CA5D /* sndfile.framework in Copy Frameworks */,
+				CBBDACD8174A52A000F8CA5D /* sfml-audio.framework in Copy Frameworks */,
+				CBBDACD9174A52A000F8CA5D /* sfml-graphics.framework in Copy Frameworks */,
+				CBBDACDA174A52A000F8CA5D /* sfml-network.framework in Copy Frameworks */,
+				CBBDACDB174A52A000F8CA5D /* sfml-system.framework in Copy Frameworks */,
+				CBBDACDC174A52A000F8CA5D /* sfml-window.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB2957071748E44300F954C5 /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderable.cpp; sourceTree = "<group>"; };
 		CB2957081748E44300F954C5 /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderable.h; sourceTree = "<group>"; };
-		CB2957091748E44300F954C5 /* Physics2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Physics2D.cpp; sourceTree = "<group>"; };
-		CB29570A1748E44300F954C5 /* Physics2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics2D.h; sourceTree = "<group>"; };
 		CB29570C1748E44300F954C5 /* IComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IComponent.cpp; sourceTree = "<group>"; };
 		CB29570D1748E44300F954C5 /* IComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IComponent.h; sourceTree = "<group>"; };
 		CB29570E1748E44300F954C5 /* IEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IEvent.cpp; sourceTree = "<group>"; };
@@ -80,8 +117,6 @@
 		CB2957171748E44300F954C5 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		CB2957191748E44300F954C5 /* TGDP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TGDP.cpp; sourceTree = "<group>"; };
 		CB29571A1748E44300F954C5 /* TGDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDP.h; sourceTree = "<group>"; };
-		CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LuaBehaviour.cpp; sourceTree = "<group>"; };
-		CB29572E17498B4000F954C5 /* LuaBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaBehaviour.h; sourceTree = "<group>"; };
 		CB40BEBE1747899400FE0AB2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CB40BEC7174789F900FE0AB2 /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
 		CB40BEC8174789F900FE0AB2 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
@@ -131,6 +166,26 @@
 		CBB1107417478D5600CA891F /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../libraries/osx/universal/sfml-system.framework"; sourceTree = "<group>"; };
 		CBB1107517478D5600CA891F /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../libraries/osx/universal/sfml-window.framework"; sourceTree = "<group>"; };
 		CBB1107617478D5600CA891F /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../libraries/osx/universal/SFML.framework; sourceTree = "<group>"; };
+		CBBDACB5174A4E9900F8CA5D /* PhysicalBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicalBody.cpp; sourceTree = "<group>"; };
+		CBBDACB6174A4E9900F8CA5D /* PhysicalBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalBody.h; sourceTree = "<group>"; };
+		CBBDACB8174A4E9900F8CA5D /* CircleCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircleCollider.cpp; sourceTree = "<group>"; };
+		CBBDACB9174A4E9900F8CA5D /* CircleCollider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCollider.h; sourceTree = "<group>"; };
+		CBBDACBA174A4E9900F8CA5D /* PhysicsCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsCollider.cpp; sourceTree = "<group>"; };
+		CBBDACBB174A4E9900F8CA5D /* PhysicsCollider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsCollider.h; sourceTree = "<group>"; };
+		CBBDACBC174A4E9900F8CA5D /* RectangleCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RectangleCollider.cpp; sourceTree = "<group>"; };
+		CBBDACBD174A4E9900F8CA5D /* RectangleCollider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleCollider.h; sourceTree = "<group>"; };
+		CBBDACBF174A4E9900F8CA5D /* PhysicsDebugRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsDebugRenderer.cpp; sourceTree = "<group>"; };
+		CBBDACC0174A4E9900F8CA5D /* PhysicsDebugRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsDebugRenderer.h; sourceTree = "<group>"; };
+		CBBDACC2174A4E9900F8CA5D /* LuaBehaviour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LuaBehaviour.cpp; sourceTree = "<group>"; };
+		CBBDACC3174A4E9900F8CA5D /* LuaBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaBehaviour.h; sourceTree = "<group>"; };
+		CBBDACCA174A4EC700F8CA5D /* libChipmunk-Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libChipmunk-Debug.a"; path = "../../libraries/osx/universal/libChipmunk-Debug.a"; sourceTree = "<group>"; };
+		CBBDACCC174A501000F8CA5D /* libChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChipmunk.a; path = ../../libraries/osx/universal/libChipmunk.a; sourceTree = "<group>"; };
+		CBBDACDD174A52FC00F8CA5D /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../libraries/osx/universal/SFML.framework; sourceTree = "<group>"; };
+		CBBDACE2174A535800F8CA5D /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
+		CBBDACE3174A535800F8CA5D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CBBDACE4174A535800F8CA5D /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
+		CBBDACE5174A535800F8CA5D /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
+		CBBDACE6174A535800F8CA5D /* test.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBDACCD174A501000F8CA5D /* libChipmunk.a in Frameworks */,
 				CBB1107717478D5600CA891F /* freetype.framework in Frameworks */,
 				CBB1107817478D5600CA891F /* sndfile.framework in Frameworks */,
 				CBB1107917478D5600CA891F /* sfml-audio.framework in Frameworks */,
@@ -155,12 +211,13 @@
 		CB2957061748E44300F954C5 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				CBBDACB5174A4E9900F8CA5D /* PhysicalBody.cpp */,
+				CBBDACB6174A4E9900F8CA5D /* PhysicalBody.h */,
+				CBBDACB7174A4E9900F8CA5D /* physics */,
+				CBBDACBE174A4E9900F8CA5D /* renderables */,
+				CBBDACC1174A4E9900F8CA5D /* scripting */,
 				CB2957071748E44300F954C5 /* Renderable.cpp */,
 				CB2957081748E44300F954C5 /* Renderable.h */,
-				CB2957091748E44300F954C5 /* Physics2D.cpp */,
-				CB29570A1748E44300F954C5 /* Physics2D.h */,
-				CB29572D17498B4000F954C5 /* LuaBehaviour.cpp */,
-				CB29572E17498B4000F954C5 /* LuaBehaviour.h */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -299,6 +356,9 @@
 		CB8C13FC1747112800FDD8E8 = {
 			isa = PBXGroup;
 			children = (
+				CBBDACDD174A52FC00F8CA5D /* SFML.framework */,
+				CBBDACCC174A501000F8CA5D /* libChipmunk.a */,
+				CBBDACCA174A4EC700F8CA5D /* libChipmunk-Debug.a */,
 				CBB1106F17478D5600CA891F /* freetype.framework */,
 				CBB1107017478D5600CA891F /* sndfile.framework */,
 				CBB1107117478D5600CA891F /* sfml-audio.framework */,
@@ -323,6 +383,7 @@
 		CB8C14081747112800FDD8E8 /* WynterStorm */ = {
 			isa = PBXGroup;
 			children = (
+				CBBDACE1174A535800F8CA5D /* assets */,
 				CB40BF07174789FE00FE0AB2 /* libraries */,
 				CB40BEB61747899400FE0AB2 /* source */,
 				CB8C14091747112800FDD8E8 /* Supporting Files */,
@@ -340,6 +401,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CBBDACB7174A4E9900F8CA5D /* physics */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDACB8174A4E9900F8CA5D /* CircleCollider.cpp */,
+				CBBDACB9174A4E9900F8CA5D /* CircleCollider.h */,
+				CBBDACBA174A4E9900F8CA5D /* PhysicsCollider.cpp */,
+				CBBDACBB174A4E9900F8CA5D /* PhysicsCollider.h */,
+				CBBDACBC174A4E9900F8CA5D /* RectangleCollider.cpp */,
+				CBBDACBD174A4E9900F8CA5D /* RectangleCollider.h */,
+			);
+			path = physics;
+			sourceTree = "<group>";
+		};
+		CBBDACBE174A4E9900F8CA5D /* renderables */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDACBF174A4E9900F8CA5D /* PhysicsDebugRenderer.cpp */,
+				CBBDACC0174A4E9900F8CA5D /* PhysicsDebugRenderer.h */,
+			);
+			path = renderables;
+			sourceTree = "<group>";
+		};
+		CBBDACC1174A4E9900F8CA5D /* scripting */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDACC2174A4E9900F8CA5D /* LuaBehaviour.cpp */,
+				CBBDACC3174A4E9900F8CA5D /* LuaBehaviour.h */,
+			);
+			path = scripting;
+			sourceTree = "<group>";
+		};
+		CBBDACE1174A535800F8CA5D /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDACE2174A535800F8CA5D /* cute_image.jpg */,
+				CBBDACE3174A535800F8CA5D /* icon.png */,
+				CBBDACE4174A535800F8CA5D /* nice_music.ogg */,
+				CBBDACE5174A535800F8CA5D /* sansation.ttf */,
+				CBBDACE6174A535800F8CA5D /* test.lua */,
+			);
+			name = assets;
+			path = ../../../assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +454,7 @@
 			buildPhases = (
 				CB8C14011747112800FDD8E8 /* Sources */,
 				CB8C14021747112800FDD8E8 /* Frameworks */,
+				CBBDACD5174A529400F8CA5D /* Copy Frameworks */,
 				CB8C14031747112800FDD8E8 /* Resources */,
 				CB8C14041747112800FDD8E8 /* ShellScript */,
 			);
@@ -392,6 +498,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBDACE7174A535800F8CA5D /* cute_image.jpg in Resources */,
+				CBBDACE8174A535800F8CA5D /* icon.png in Resources */,
+				CBBDACE9174A535800F8CA5D /* nice_music.ogg in Resources */,
+				CBBDACEA174A535800F8CA5D /* sansation.ttf in Resources */,
+				CBBDACEB174A535800F8CA5D /* test.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,14 +566,18 @@
 				CBA501E3174795EC0099D573 /* ObjectCollision.cpp in Sources */,
 				CBA501E6174796F80099D573 /* Player.cpp in Sources */,
 				CB29571B1748E44300F954C5 /* Renderable.cpp in Sources */,
-				CB29571C1748E44300F954C5 /* Physics2D.cpp in Sources */,
 				CB29571D1748E44300F954C5 /* IComponent.cpp in Sources */,
 				CB29571E1748E44300F954C5 /* IEvent.cpp in Sources */,
 				CB29571F1748E44300F954C5 /* IGame.cpp in Sources */,
 				CB2957201748E44300F954C5 /* IGameObject.cpp in Sources */,
 				CB2957211748E44300F954C5 /* Scene.cpp in Sources */,
 				CB2957221748E44300F954C5 /* TGDP.cpp in Sources */,
-				CB29572F17498B4000F954C5 /* LuaBehaviour.cpp in Sources */,
+				CBBDACC4174A4E9900F8CA5D /* PhysicalBody.cpp in Sources */,
+				CBBDACC5174A4E9900F8CA5D /* CircleCollider.cpp in Sources */,
+				CBBDACC6174A4E9900F8CA5D /* PhysicsCollider.cpp in Sources */,
+				CBBDACC7174A4E9900F8CA5D /* RectangleCollider.cpp in Sources */,
+				CBBDACC8174A4E9900F8CA5D /* PhysicsDebugRenderer.cpp in Sources */,
+				CBBDACC9174A4E9900F8CA5D /* LuaBehaviour.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +655,7 @@
 		CB8C141C1747112900FDD8E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libraries/osx/universal\"",
@@ -556,15 +672,18 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libraries/osx/\"",
 					"\"$(SRCROOT)/../../libraries/osx/source\"",
+					"\"$(SRCROOT)/../../libraries/osx/universal\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		CB8C141D1747112900FDD8E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libraries/osx/universal\"",
@@ -581,9 +700,11 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libraries/osx/\"",
 					"\"$(SRCROOT)/../../libraries/osx/source\"",
+					"\"$(SRCROOT)/../../libraries/osx/universal\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};

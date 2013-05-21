@@ -10,6 +10,7 @@
 #include <components/physics/CircleCollider.h>
 #include <components/scripting/LuaBehaviour.h>
 #include <iostream>
+#include <ResourcePath.hpp>
 
 lua_State* ws::components::LuaBehaviour::state = 0;
 
@@ -48,7 +49,7 @@ void ws::components::LuaBehaviour::SetupLuaState() {
 	}
 	RegisterClass_Player(state);
 
-	luaL_dofile(state, "assets/test.lua");
+	luaL_dofile(state, (resourcePath() + std::string("assets/test.lua")).c_str());
 	lua_close(state);
 }
 

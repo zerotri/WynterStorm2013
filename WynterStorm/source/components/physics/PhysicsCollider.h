@@ -1,7 +1,7 @@
 #ifndef WYNTERSTORM_COMPONENT_PHYSICS_COLLIDER_H
 #define WYNTERSTORM_COMPONENT_PHYSICS_COLLIDER_H
 #include <core/IComponent.h>
-#include <chipmunk.h>
+#include <chipmunk/chipmunk.h>
 
 namespace ws {
 	namespace components {

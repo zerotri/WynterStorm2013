@@ -1,7 +1,7 @@
 #ifndef WYNTERSTORM_COMPONENT_CIRCLE_COLLIDER_H
 #define WYNTERSTORM_COMPONENT_CIRCLE_COLLIDER_H
 #include <components/physics/PhysicsCollider.h>
-#include <chipmunk.h>
+#include <chipmunk/chipmunk.h>
 
 namespace ws {
 	namespace components {

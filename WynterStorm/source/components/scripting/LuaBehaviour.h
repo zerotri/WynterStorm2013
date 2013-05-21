@@ -30,9 +30,11 @@ namespace ws {
 			}
 			template<typename ObjectType> static ObjectType* UnwrapLightObject(lua_light_object light_object) {
 				// we can exit early with a quick check of the type hash
-				if(		(light_object.type_hash == typeid(ObjectType).hash_code())
-					&&	(ObjectType* object = dynamic_cast<ObjectType*>(light_object.object_pointer))) {
-					return object;
+				if(light_object.type_hash == typeid(ObjectType).hash_code()) {
+					ObjectType* object = dynamic_cast<ObjectType*>(light_object.object_pointer);
+					if(object != nullptr) {
+						return object;
+					}
 				}
 				return nullptr;
 			}

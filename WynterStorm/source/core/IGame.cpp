@@ -5,7 +5,16 @@
 #include <components/PhysicalBody.h>
 #include <components/Renderable.h>
 
+#ifdef __APPLE__
+	#include <ResourcePath.hpp>
+#endif
 
+std::string ws::core::IGame::getResourcePath() {
+	#ifdef __APPLE__
+		return resourcePath();
+	#endif
+		return std::string("");
+}
 ws::core::IGame::IGame(void) {
 	window.create(sf::VideoMode(800, 600), "WynterStorm");
 }

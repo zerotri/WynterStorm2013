@@ -245,6 +245,9 @@
     <ClInclude Include="..\..\source\components\scripting\LuaBehaviour.h">
       <Filter>source\components\scripting</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\components\scripting\LuaBindings.h">
+      <Filter>source\components\scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\test.lua">

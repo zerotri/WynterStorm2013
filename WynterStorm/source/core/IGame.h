@@ -12,6 +12,7 @@ namespace ws {
 			IGame(void);
 			virtual ~IGame(void);
 			virtual int Run();
+			static std::string getResourcePath();
 		};
 	}
 }

@@ -7,23 +7,32 @@
 #include <map>
 
 namespace ws {
+	typedef int64_t GoId;
 	namespace game {
 		class Scene;
 	}
 	namespace core {
 		class IGameObject
 		{
+		private:
+			static ws::GoId numGameObjects;
+			static std::map<ws::GoId, IGameObject*> gameObjectDB;
 		protected:
 			//std::map<size_t, IComponent*> components;
+			ws::GoId id;
 			std::map<std::string, IComponent*> components;
 
 
 			// default interpreted events
 		
 		public:
+			static ws::GoId addGameObjectToDB(IGameObject*);
+			static IGameObject* getGameObjectFromDB(ws::GoId id);
+
 			IGameObject(void);
 			virtual ~IGameObject(void);
 
+			ws::GoId getId();
 
 			template<typename ComponentType> int addComponent(std::string tag = "") {
 				if(tag == "")

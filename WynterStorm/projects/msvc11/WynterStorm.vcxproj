@@ -190,6 +190,7 @@
     <ClInclude Include="..\..\source\components\Renderable.h" />
     <ClInclude Include="..\..\source\components\renderables\PhysicsDebugRenderer.h" />
     <ClInclude Include="..\..\source\components\scripting\LuaBehaviour.h" />
+    <ClInclude Include="..\..\source\components\scripting\LuaBindings.h" />
     <ClInclude Include="..\..\source\core\IComponent.h" />
     <ClInclude Include="..\..\source\core\IComponentSystem.h" />
     <ClInclude Include="..\..\source\core\IEvent.h" />

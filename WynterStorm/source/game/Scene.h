@@ -41,9 +41,10 @@ namespace ws {
 				size_t typeHash = typeid(EventType).hash_code();
 				auto subscriptions = eventSubscriptions.find(typeHash);
 				std::cout << "Number of subscriptions: " << eventSubscriptions.size() << std::endl;
+				std::cout << "Sending event of type: " << typeid(EventType).name() << " with id@" << typeid(EventType).hash_code() << std::endl;
 				if(subscriptions != eventSubscriptions.end())
 				{
-					for( auto subscription : subscriptions->second)
+					for( auto subscription : subscriptions->second )
 					{
 						subscription->onEvent(&event);
 					}

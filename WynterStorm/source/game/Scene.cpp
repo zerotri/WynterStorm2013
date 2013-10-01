@@ -4,6 +4,7 @@
 #include <components/PhysicalBody.h>
 #include <components/scripting/LuaBehaviour.h>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/System/Sleep.hpp>
 cpShape* ground = nullptr;
 
 ws::game::Scene::Scene() {
@@ -35,7 +36,8 @@ void ws::game::Scene::addObject(ws::core::IGameObject* object) {
 }
 void ws::game::Scene::update(float deltaTime) {
 	
-	cpSpaceStep(space, deltaTime);
+	cpSpaceStep(space, 1.0f/60.0f);//deltaTime);
+	
 	// PhysicalBody
 	for( auto object : objects )
 	{
@@ -45,6 +47,7 @@ void ws::game::Scene::update(float deltaTime) {
 			physics->update(deltaTime);
 		}
 	}
+	sf::sleep(sf::seconds(0.01f));
 }
 void ws::game::Scene::draw(sf::RenderWindow& window) {
 	ws::components::Renderable::setGlobalRenderTarget(&window);
@@ -55,10 +58,10 @@ void ws::game::Scene::draw(sf::RenderWindow& window) {
 
 	cpVect screenSize = cpv(800,600);
 	cpVect screenPos = groundPos;
-	screenPos = cpvsub(cpvmult(screenSize, 0.5), groundPos);
+	//screenPos = cpvsub(cpvmult(screenSize, 0.5), groundPos);
 
 
-	rect.setPosition(sf::Vector2f(screenPos.x-200, screenPos.y));
+	rect.setPosition(sf::Vector2f(screenSize.x - screenPos.x-200, screenSize.y - screenPos.y));
 	rect.setFillColor(sf::Color::Green);
 	window.draw(rect);
 	// Renderable

@@ -28,8 +28,8 @@ int ws::core::IGame::Run() {
 	ws::objects::Player player;
 
 	scene.addObject(&player);
-	
-	scene.fireEvent<ws::events::ObjectCollision>(ws::events::ObjectCollision(&player, nullptr));
+	scene.addEventSubscription< ws::events::ObjectCollision >( &player );
+	scene.fireEvent< ws::events::ObjectCollision >( ws::events::ObjectCollision( &player, nullptr ) );
 	
 
 	auto physics = player.getComponent<ws::components::PhysicalBody>("physics");

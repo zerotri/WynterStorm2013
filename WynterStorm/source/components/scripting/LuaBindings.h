@@ -142,7 +142,7 @@ namespace ws {
 				template<typename DataType>
 				int SetGlobal(lua_State* state, DataType* data, std::string name) {
 					Push<DataType>(state, data);
-					lua_setglobal(name.c_str());
+					lua_setglobal(state, name.c_str());
 					return 0;
 				}
 				int SetGlobal(lua_State* state, int data, std::string name) {

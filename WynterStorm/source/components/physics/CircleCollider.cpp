@@ -4,7 +4,7 @@ ws::components::physics::CircleCollider::CircleCollider(ws::core::IGameObject* o
 	: ws::components::physics::PhysicsCollider(owner, tag), radius(5) {
 }
 void ws::components::physics::CircleCollider::addToBody(cpSpace* space, cpBody* body) {
-	cpFloat moment = getMoment();
+	//cpFloat moment = getMoment();
 	shape = cpSpaceAddShape(space, cpCircleShapeNew(body, radius, cpvzero));
 	cpShapeSetFriction(shape, friction);
 }

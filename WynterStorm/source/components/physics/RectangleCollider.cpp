@@ -4,7 +4,7 @@ ws::components::physics::RectangleCollider::RectangleCollider(ws::core::IGameObj
 	: ws::components::physics::PhysicsCollider(owner, tag), size(cpv(32,32)) {
 }
 void ws::components::physics::RectangleCollider::addToBody(cpSpace* space, cpBody* body) {
-	cpFloat moment = getMoment();
+	//cpFloat moment = getMoment();
 	shape = cpSpaceAddShape(space, cpBoxShapeNew(body, size.x, size.y));
 	cpShapeSetFriction(shape, friction);
 }

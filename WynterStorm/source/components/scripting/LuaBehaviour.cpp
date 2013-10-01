@@ -17,53 +17,63 @@
 #include <components/PhysicalBody.h>
 #include <iostream>
 
+#define LUA_USE_LIGHTOBJECT
+
 lua_State* ws::components::LuaBehaviour::state = 0;
 
-int lua_GameObject_New(lua_State* state) {
+int lua_gameobject_new(lua_State* state) {
 
-	// create new game object
+	//  create new game object
 	ws::core::IGameObject* object = new ws::core::IGameObject();
 
-	// add CircleCollider component
-	// object->addComponent<ws::components::physics::CircleCollider>();
+	//  add CircleCollider component
+	//  object->addComponent<ws::components::physics::CircleCollider>();
 	
-	// push object to lua stack
+	//  push object to lua stack
+#ifdef LUA_USE_LIGHTOBJECT
 	//ws::components::scripting::lua::Push< ws::core::IGameObject >(state, object);
+	auto lightObject = ws::components::scripting::lua::WrapLightObject<ws::core::IGameObject>(object);
+	lua_pushlightuserdata(state, (void*)&lightObject);
+#else
 	ws::components::scripting::lua::PushNumber(state, object->getId());
-
-	//auto lightObject = ws::components::scripting::lua::WrapLightObject<ws::core::IGameObject>(object);
-	//lua_pushlightuserdata(state, (void*)&lightObject);
+#endif
 	return 1;
 }
 
 // lua function: GameObject.AddComponent( GameObject object, int type_hash, string tag )
-int lua_GameObject_AddComponent(lua_State* state) {
+int lua_gameobject_addcomponent(lua_State* state) {
 
-	int arguments = lua_gettop(state);//ws::components::scripting::lua::GetInteger(state);
+	int arguments = lua_gettop(state);
+	//ws::components::scripting::lua::GetInteger(state);
 	std::cout << "gameobject_addComponent called with " << arguments << " arguments." << std::endl;
 
-	// get string from arg2
+	//  get string from arg2
 	std::string tag = ws::components::scripting::lua::PopString(state);
 
-	// get integer from arg1, containing RTTI hash_code
+	//  get integer from arg1, containing RTTI hash_code
 	size_t hash = (size_t)ws::components::scripting::lua::PopInteger(state);
 
-	// get object from arg0
-	//ws::core::IGameObject* object = ws::components::scripting::lua::PopValue<ws::core::IGameObject>(state);
+	//  get object from arg0
+#ifdef LUA_USE_LIGHTOBJECT
+	ws::core::IGameObject* object = ws::components::scripting::lua::PopValue<ws::core::IGameObject>(state);
+#else
 	int objId = ws::components::scripting::lua::PopInteger(state);
 
 	std::cout << "object id specified: #" << objId << std::endl;
 	auto object = ws::core::IGameObject::getGameObjectFromDB(objId);
+#endif
 
-	// make sure we aren't about to try to add a component to a nullptr
+	//  make sure we aren't about to try to add a component to a nullptr
 	if(object == nullptr) {
-		// TODO: I really should implement some sort of error handling
+		std::cout << "[gameobject_addComponent]\t" << "Error finding object" << std::endl;
+		//  TODO: I really should implement some sort of error handling
 		return -1;
 	}
 
 	
 
 	// TODO: hard coding all of these components in isn't the most extendable way to do this
+	std::cout << "[gameobject_addComponent]\t" << "Adding component of type @" << hash << std::endl;
 	if(hash == typeid(ws::components::LuaBehaviour).hash_code()) {
 		// LuaBehaviour
 		object->addComponent<ws::components::LuaBehaviour>(tag);
@@ -95,8 +105,8 @@ int lua_GameObject_AddComponent(lua_State* state) {
 }
 
 void RegisterClass_Player(lua_State* state) {
-	lua_register(state, "gameobject_new", lua_GameObject_New);
-	lua_register(state, "gameobject_addComponent", lua_GameObject_AddComponent);
+	lua_register(state, "gameobject_new", lua_gameobject_new);
+	lua_register(state, "gameobject_addComponent", lua_gameobject_addcomponent);
 	ws::components::scripting::lua::SetGlobal(state, typeid(ws::components::physics::CircleCollider).hash_code(),"ComponentType_CircleCollider");
 }
 
@@ -119,7 +129,7 @@ void ws::components::LuaBehaviour::SetupLuaState() {
 	}
 	RegisterClass_Player(state);
 
-	luaL_dofile(state, (ws::core::IGame::getResourcePath() + std::string("assets/test.lua")).c_str());
+	luaL_dofile(state, (ws::core::IGame::getResourcePath() + std::string("test.lua")).c_str());
 	lua_close(state);
 }
 
